@@ -198,6 +198,7 @@ app.get('/v1/recentStores', (req, res) => {
 });
 
 
+
 app.get('/v1/allStoreDetails', (req, res) => {
   const query = `
     SELECT * 

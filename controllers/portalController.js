@@ -115,7 +115,10 @@ console.log(req.body);
       { expiresIn: '1h' }
     );
 
-    res.json({ token });
+    res.json({ token,
+      customer: customer
+     });
+
   } catch (error) {
     console.error('Error in customerLogin:', error.originalError || error.message);
     res.status(error.status || 500).send(error.message || 'An error occurred during login');
